@@ -16,7 +16,7 @@
 
 ```bash
 git clone https://github.com/yourusername/cash-shell.git
-cd cash-shell
+cd cashIsAbsoluteShell
 ```
 
 2. Установить зависимости:
