@@ -1,0 +1,518 @@
+history
+exit
+curru
+su
+su vills
+addu vills
+su villa
+su vills
+list
+jjdfjkldfjjklgdfjgkld
+djfsjklfgj
+list
+help
+owl
+sysfetch
+addu gay
+remu gay
+curru
+clr
+run /home/vills/projects/cash/testcas.cas
+// Test .cas script for cash
+// Test .cas script for cash
+// Создаём директорию test_dir
+// Создаём директорию test_dir
+make -d test_dir
+make -d test_dir
+// Создаём файл hello.txt
+// Создаём файл hello.txt
+make -f test_dir/hello.txt
+make -f test_dir/hello.txt
+// Записываем в файл
+// Записываем в файл
+fear test_dir/hello.txt -e "Привет! Это тестовый .cas-скрипт."
+fear test_dir/hello.txt -e "Привет! Это тестовый .cas-скрипт."
+// Читаем и выводим содержимое файла
+// Читаем и выводим содержимое файла
+fear test_dir/hello.txt -r
+fear test_dir/hello.txt -r
+// Создаём кастомную команду greet
+// Создаём кастомную команду greet
+coma greet {
+coma greet {
+oput "Привет, пользователь Cash!"
+oput "Привет, пользователь Cash!"
+}
+}
+// Вызываем команду greet
+// Вызываем команду greet
+greet
+greet
+// Удаляем временные файлы
+// Удаляем временные файлы
+rm test_dir/hello.txt
+rm test_dir/hello.txt
+rm -r test_dir
+rm -r test_dir
+// Удаляем команду greet
+// Удаляем команду greet
+codel
+codel
+fear /home/vills/projects/cash/testcas.cas -r
+help
+run /home/vills/projects/cash/testcas.cas
+make -d test_dir
+run /home/vills/projects/cash/testcas.cas
+make -d test_dir
+make -d test_dir
+make -f test_dir/hello.txt
+make -f test_dir/hello.txt
+fear test_dir/hello.txt -e "Привет! Это тестовый .cas-скрипт."
+fear test_dir/hello.txt -e "Привет! Это тестовый .cas-скрипт."
+fear test_dir/hello.txt -r
+fear test_dir/hello.txt -r
+coma greet {
+oput "Привет, пользователь Cash!"
+oput "Привет, пользователь Cash!"
+}
+}
+greet
+greet
+rm test_dir/hello.txt
+rm test_dir/hello.txt
+rm -r test_dir
+rm -r test_dir
+codel
+codel
+fear /home/vills/projects/cash/testcas.cas -r
+run /home/vills/projects/cash/testcas.cas
+make -d test_dir
+make -d test_dir
+make -f test_dir/hello.txt
+make -f test_dir/hello.txt
+fear test_dir/hello.txt -e "Привет! Это тестовый .cas-скрипт."
+fear test_dir/hello.txt -e "Привет! Это тестовый .cas-скрипт."
+fear test_dir/hello.txt -r
+fear test_dir/hello.txt -r
+coma greet {
+oput "Привет, пользователь Cash!"
+oput "Привет, пользователь Cash!"
+oput "Привет, *user*!"
+run /home/vills/projects/cash/testcas.cas
+make -d test_dir
+make -d test_dir
+make -f test_dir/hello.txt
+make -f test_dir/hello.txt
+fear test_dir/hello.txt -e "Привет! Это тестовый .cas-скрипт."
+fear test_dir/hello.txt -e "Привет! Это тестовый .cas-скрипт."
+fear test_dir/hello.txt -r
+fear test_dir/hello.txt -r
+coma greet {
+oput "Привет, пользователь Cash!"
+oput "Привет, пользователь Cash!"
+}
+}
+greet
+greet
+rm test_dir/hello.txt
+rm test_dir/hello.txt
+rm -r test_dir
+rm -r test_dir
+codel
+codel
+exit
+run /home/vills/projects/cash/testcas.cas
+coma greet oput "Привет, пользователь Cash!" & oput "Как дела?"
+greet
+oput "Привет, пользователь Cash!" & oput "Как дела?"
+oput "Привет, пользователь Cash!" & oput "Как дела?"
+codel greet
+codel greet
+exit
+run """Обрабатывает команды, включая кастомные, и логирует их"""
+    from history import log_command  # Импорт внутри функции, чтобы избежать циклов
+
+    parts = command.split()
+    if not parts:
+        return
+
+    cmd = parts[0]
+    params = parts[1:]
+
+    # Проверяем, есть ли команда в кастомных
+    if cmd in commands_dict:
+        print(f"[DEBUG] Выполняем кастомную команду `{
+              cmd}`: {commands_dict[cmd]}")
+
+        # Разбиваем команду, если в ней есть `;`
+        for sub_command in commands_dict[cmd].split(";"):
+            log_command(sub_command.strip())  # Логируем выполнение
+            exec_command(sub_command.strip())  # Выполняем команды отдельно
+        return
+
+    log_command(command)  # Логируем обычные команды
+run /home/vills/projects/cash/testcas.cas
+coma greet oput "Привет, пользователь Cash!" & oput "Как дела?"
+greet
+o
+o
+p
+p
+u
+u
+t
+t
+ 
+"
+"
+П
+П
+р
+р
+и
+и
+в
+в
+е
+е
+т
+т
+,
+,
+ 
+п
+п
+о
+о
+л
+л
+ь
+ь
+з
+з
+о
+о
+в
+в
+а
+а
+т
+т
+е
+е
+л
+л
+ь
+ь
+ 
+C
+C
+a
+a
+s
+s
+h
+h
+!
+!
+"
+"
+ 
+&
+&
+ 
+o
+o
+p
+p
+u
+u
+t
+t
+ 
+"
+"
+К
+К
+а
+а
+к
+к
+ 
+д
+д
+е
+е
+л
+л
+а
+а
+?
+?
+"
+"
+codel greet
+codel greet
+run /home/vills/projects/cash/testcas.cas
+coma greet oput "Привет, пользователь Cash!" & oput "Как дела?"
+greet
+oput "Привет, пользователь Cash!" & oput "Как дела?"
+oput "Привет, пользователь Cash!" & oput "Как дела?"
+codel greet
+codel greet
+coma greet oput "Привет!" & oput "Как дела?"
+oput "Привет!"
+oput "Привет!"
+oput "Как дела?"
+oput "Как дела?"
+codel greet
+run /home/vills/projects/cash/testcas.cas
+coma greet oput "Привет, пользователь Cash!" & oput "Как дела?"
+greet
+o
+o
+p
+p
+u
+u
+t
+t
+ 
+"
+"
+П
+П
+р
+р
+и
+и
+в
+в
+е
+е
+т
+т
+,
+,
+ 
+п
+п
+о
+о
+л
+л
+ь
+ь
+з
+з
+о
+о
+в
+в
+а
+а
+т
+т
+е
+е
+л
+л
+ь
+ь
+ 
+C
+C
+a
+a
+s
+s
+h
+h
+!
+!
+"
+"
+ 
+&
+&
+ 
+o
+o
+p
+p
+u
+u
+t
+t
+ 
+"
+"
+К
+К
+а
+а
+к
+к
+ 
+д
+д
+е
+е
+л
+л
+а
+а
+?
+?
+"
+"
+codel greet
+codel greet
+run /home/vills/projects/cash/testcas.cas
+coma greet oput "Привет, пользователь Cash!" & oput "Как дела?"
+oput "Привет, пользователь Cash!"
+oput "Привет, пользователь Cash!"
+oput "Как дела?"
+oput "Как дела?"
+codel greet
+oput yagami & imagay
+oput "yagami" & "imagay"
+oput yagami & oput imagay
+coma yagami oput yagami & oput imagay
+oput yagami
+oput yagami
+oput imagay
+oput imagay
+codel yagami
+codel list
+list
+owl
+help
+permod
+exit
+list
+exit
+list
+owl
+help
+exit
+fear test -e
+fear test -r
+run /home/vills/projects/cash/testcas.cas
+coma greet oput "Привет, пользователь Cash!" & oput "Как дела?"
+oput "Привет, пользователь Cash!"
+oput "Привет, пользователь Cash!"
+oput "Как дела?"
+oput "Как дела?"
+codel greet
+su sa
+curru
+curru
+su vills
+curru
+su sa
+curru
+su vills
+curru
+su sa
+curru
+curru vills
+sa vills
+su vills
+curru
+su vills
+dsflpsdfdsl;dskfgdksl;'gdsk
+curru
+su vills
+su vills
+su vills
+fjasiofijkiopfsadikfadsjoidswfijdskopgfjkdsikogjfsdiogsdjoikgj
+curru
+su vills
+su vills
+curru
+su sa
+curru
+curru
+exit
+curru
+su vills
+curru
+curru
+su vills
+# Я ещё не vills
+curru
+su vills
+help
+curru
+su vills
+fdklsdfjklfdskfdsakl;fasdjklfjklfasklfadsjfklasdjfklasjfklasjfklsazjfklsajfkla
+exit
+curru
+su vills
+curru
+su sa
+curru
+su vills
+curru
+su ja
+curru
+su sa
+curru
+su vills
+curru
+exit
+su sa
+su vills
+curru
+su sa
+su vills
+exit
+su sa
+curru
+su vills
+exit
+curru
+su  sa
+curru
+su vills
+curru
+exit
+su beksu
+su sa
+curru
+su vills
+curru
+addu sufix
+su sufix
+curru
+su vills
+remu sufix
+su sufix
+run /home/vills/projects/cash/testcas.cas
+coma greet oput "Привет, пользователь Cash!" & oput "Как дела?"
+oput "Привет, пользователь Cash!"
+oput "Привет, пользователь Cash!"
+oput "Как дела?"
+oput "Как дела?"
+codel greet
+coma back goto .. & oput Перемещаемся на директорию назад
+goto ..
+goto ..
+oput Перемещаемся на директорию назад
+oput Перемещаемся на директорию назад
+goto vills
+codel back
+exit
+list
+list
+clr
+oput pinux
+oput нигерс нигерс нигерс нигерс
+щзге
+oput
+oput dsfjkdshdsjkfheasjkfhaajkfhasjkfhsafhjkahfjkahfhjkashfsafhahjwshfehjrhgioudjneihnijkkjksdvjjwsjjknvjdsjkjkdfgjsilkjknejk
+yagami
+owl
+sysfetch
+neofetch

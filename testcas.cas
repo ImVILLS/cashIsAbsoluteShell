@@ -1,0 +1,3 @@
+coma greet oput "Привет, пользователь Cash!" & oput "Как дела?"
+greet
+codel greet
